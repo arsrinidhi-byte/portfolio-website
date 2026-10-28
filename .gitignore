@@ -1,0 +1,35 @@
+# Dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# Testing & Build Outputs
+/.next/
+/out/
+/build
+
+# Private documents & resumes (Explicitly blocked)
+*.pdf
+*resume*
+*Resume*
+*Linkdin*
+*.PDF
+
+# Environment variables & secrets
+.env*
+*.pem
+*.key
+*.token
+
+# Logs & temp files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+.DS_Store
+Thumbs.db
+
+# Skills internal data
+.agents/
+.taste-skill/
+skills-lock.json

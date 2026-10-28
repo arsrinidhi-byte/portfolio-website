@@ -1,0 +1,66 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+:root {
+  --bg: #e6dbc7;
+  --surface: #ddd0b9;
+  --ink: #062b8a;
+  --muted: #3a5aa8;
+  --accent: #062b8a;
+  --accent-ink: #e6dbc7;
+
+  --step-small: clamp(0.8125rem, 0.79rem + 0.1vw, 0.875rem);
+  --step-body: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+  --step-lead: clamp(1.25rem, 1.1rem + 0.7vw, 1.625rem);
+  --step-head: clamp(2.5rem, 1.2rem + 5vw, 5.5rem);
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg);
+  color: var(--ink);
+}
+
+body {
+  font-family: 'Red Hat Text', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--bg);
+  color: var(--ink);
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Headings use Red Hat Display */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Red Hat Display', sans-serif;
+  color: var(--ink);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 0.95;
+}
+
+/* Taste Skill House Rules: No shadows at rest, no borders as dividers, tone steps instead */
+::selection {
+  background-color: var(--ink);
+  color: var(--bg);
+}
+
+/* Custom interactive highlight */
+.hl-solid {
+  background-color: var(--surface);
+  color: var(--ink);
+  padding: 0.1em 0.35em;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.hl-cobalt {
+  background-color: var(--ink);
+  color: var(--bg);
+  padding: 0.15em 0.4em;
+  font-weight: 700;
+  display: inline-block;
+}
+

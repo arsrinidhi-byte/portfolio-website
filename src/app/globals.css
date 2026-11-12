@@ -2,65 +2,291 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-:root {
-  --bg: #e6dbc7;
-  --surface: #ddd0b9;
-  --ink: #062b8a;
-  --muted: #3a5aa8;
-  --accent: #062b8a;
-  --accent-ink: #e6dbc7;
+/* ===================================================================
+   HARSHITH.COM EXACT DESIGN SYSTEM & AESTHETIC REPLICATION
+   Obsidian Ink, Warm Bone, Wine Accent, and Antique Gold
+   =================================================================== */
 
-  --step-small: clamp(0.8125rem, 0.79rem + 0.1vw, 0.875rem);
-  --step-body: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
-  --step-lead: clamp(1.25rem, 1.1rem + 0.7vw, 1.625rem);
-  --step-head: clamp(2.5rem, 1.2rem + 5vw, 5.5rem);
+:root {
+  --ink: #0a0908;
+  --ink-2: #14120f;
+  --ink-3: #1d1a16;
+  --bone: #e8e4dc;
+  --bone-2: #d8d2c6;
+  --smoke: #8f887b;
+  --smoke-dim: #56514a;
+  --wine: #7d1f2e;
+  --wine-bright: #a32639;
+  --wine-readable: #d65d72;
+  --gold: #b4924c;
+
+  --f-display: "Archivo", -apple-system, BlinkMacSystemFont, sans-serif;
+  --f-serif: "Instrument Serif", Georgia, serif;
+  --f-mono: "IBM Plex Mono", Menlo, Consolas, monospace;
+
+  --ease-out: cubic-bezier(.22, 1, .36, 1);
+  --ease-luxe: cubic-bezier(.65, .05, 0, 1);
+
+  --gutter-edge: clamp(1.25rem, 3.5vw, 4rem);
+  --measure-wide: 100rem;
+  --measure-standard: 72rem;
+  --measure-reading: 42rem;
+  --gutter: max(var(--gutter-edge), calc((100% - var(--measure-wide)) / 2));
 }
 
 html {
   scroll-behavior: smooth;
-  background-color: var(--bg);
-  color: var(--ink);
+  background-color: var(--ink);
+  color: var(--bone);
+  color-scheme: dark;
 }
 
 body {
-  font-family: 'Red Hat Text', -apple-system, BlinkMacSystemFont, sans-serif;
-  background-color: var(--bg);
-  color: var(--ink);
-  line-height: 1.5;
+  font-family: var(--f-display);
+  background-color: var(--ink);
+  color: var(--bone);
+  line-height: 1.6;
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
-/* Headings use Red Hat Display */
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Red Hat Display', sans-serif;
-  color: var(--ink);
-  font-weight: 900;
-  letter-spacing: -0.03em;
-  line-height: 0.95;
-}
-
-/* Taste Skill House Rules: No shadows at rest, no borders as dividers, tone steps instead */
 ::selection {
-  background-color: var(--ink);
-  color: var(--bg);
+  background-color: var(--wine);
+  color: var(--bone);
 }
 
-/* Custom interactive highlight */
-.hl-solid {
-  background-color: var(--surface);
-  color: var(--ink);
-  padding: 0.1em 0.35em;
-  font-weight: 600;
-  display: inline-block;
+/* Typography Helpers */
+.font-display {
+  font-family: var(--f-display);
 }
 
-.hl-cobalt {
-  background-color: var(--ink);
-  color: var(--bg);
-  padding: 0.15em 0.4em;
+.font-serif-it {
+  font-family: var(--f-serif);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.font-mono-code {
+  font-family: var(--f-mono);
+}
+
+/* Section Header (Divider rule from harshith.com) */
+.section-head {
+  color: var(--smoke);
+  font-family: var(--f-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: clamp(2.5rem, 5vw, 4.5rem);
+}
+
+.section-head:after {
+  content: "";
+  background: rgba(232, 228, 220, 0.12);
+  flex: 1;
+  height: 1px;
+}
+
+/* Navigation Links */
+.nav__link {
+  color: var(--bone-2);
+  font-family: var(--f-display);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.25s;
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav__link:after {
+  content: "";
+  background: var(--wine-readable);
+  transform-origin: 0;
+  height: 1px;
+  position: absolute;
+  inset: auto 0 -0.25rem;
+  transform: scaleX(0);
+  transition: transform 0.25s var(--ease-out);
+}
+
+.nav__link:hover {
+  color: var(--bone);
+}
+
+.nav__link:hover:after {
+  transform: scaleX(1);
+}
+
+/* Work Row (Exact harshith.com signature interaction) */
+.work-row {
+  isolation: isolate;
+  border-bottom: 1px solid rgba(232, 228, 220, 0.12);
+  display: grid;
+  grid-template-columns: 3.5rem minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: 1.5rem;
+  padding: clamp(1.4rem, 2.8vw, 2.2rem) 0.8rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s var(--ease-out);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .work-row {
+    grid-template-columns: 2.5rem minmax(0, 1fr) auto;
+    gap: 0.75rem;
+  }
+  .work-row__cat {
+    display: none;
+  }
+}
+
+.work-row:before {
+  content: "";
+  background: var(--bone);
+  transform-origin: bottom;
+  transition: transform 0.45s var(--ease-luxe);
+  z-index: 0;
+  position: absolute;
+  inset: 0;
+  transform: scaleY(0);
+}
+
+.work-row:hover:before,
+.work-row.is-active:before {
+  transform-origin: top;
+  transform: scaleY(1);
+}
+
+.work-row__idx {
+  font-family: var(--f-mono);
+  letter-spacing: 0.14em;
+  color: var(--smoke);
+  font-size: 0.75rem;
+  transition: color 0.3s;
+  position: relative;
+  z-index: 1;
+}
+
+.work-row__title {
+  font-family: var(--f-display);
   font-weight: 700;
-  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: -0.025em;
+  color: var(--bone);
+  transition: color 0.3s, transform 0.45s var(--ease-luxe);
+  display: inline-flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.85rem;
+  min-width: 0;
+  font-size: clamp(1.35rem, 0.95rem + 2vw, 2.75rem);
+  line-height: 1.1;
+  position: relative;
+  z-index: 1;
 }
 
+.work-row__title em {
+  font-family: var(--f-serif);
+  font-style: italic;
+  font-weight: 400;
+  text-transform: none;
+  color: var(--wine-readable);
+  letter-spacing: 0;
+  font-size: 0.65em;
+  transition: color 0.3s;
+}
+
+.work-row__cat,
+.work-row__year {
+  font-family: var(--f-mono);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--smoke);
+  font-size: 0.75rem;
+  transition: color 0.3s;
+  position: relative;
+  z-index: 1;
+}
+
+.work-row__arrow {
+  opacity: 0;
+  color: var(--ink);
+  transition: transform 0.45s var(--ease-luxe), opacity 0.3s;
+  font-size: 1.5rem;
+  position: absolute;
+  right: 1.25rem;
+  top: 50%;
+  transform: translate(1.5rem, -50%);
+  z-index: 2;
+}
+
+.work-row:hover .work-row__title,
+.work-row.is-active .work-row__title {
+  color: var(--ink);
+  transform: translateX(1rem);
+}
+
+.work-row:hover .work-row__title em,
+.work-row.is-active .work-row__title em {
+  color: var(--wine);
+}
+
+.work-row:hover .work-row__idx,
+.work-row:hover .work-row__cat,
+.work-row:hover .work-row__year,
+.work-row.is-active .work-row__idx,
+.work-row.is-active .work-row__cat,
+.work-row.is-active .work-row__year {
+  color: var(--smoke-dim);
+}
+
+.work-row:hover .work-row__arrow,
+.work-row.is-active .work-row__arrow {
+  opacity: 1;
+  transform: translate(0, -50%);
+}
+
+/* Animations */
+@keyframes scroll-drip {
+  0% { top: -100%; opacity: 0; }
+  30% { opacity: 1; }
+  100% { top: 100%; opacity: 0; }
+}
+
+.animate-scroll-drip {
+  animation: scroll-drip 2.1s var(--ease-luxe) infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.35); opacity: 0.6; }
+}
+
+.animate-pulse-dot {
+  animation: pulse-dot 2.2s ease-in-out infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--ink);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--ink-3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--smoke-dim);
+}

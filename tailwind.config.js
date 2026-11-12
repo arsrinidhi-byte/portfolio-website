@@ -8,26 +8,34 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        sand: {
-          DEFAULT: '#e6dbc7',
-          surface: '#ddd0b9',
-          light: '#f2ece0',
+        ink: {
+          DEFAULT: '#0a0908',
+          2: '#14120f',
+          3: '#1d1a16',
         },
-        cobalt: {
-          DEFAULT: '#062b8a',
-          muted: '#3a5aa8',
-          deep: '#031954',
+        bone: {
+          DEFAULT: '#e8e4dc',
+          2: '#d8d2c6',
+        },
+        smoke: {
+          DEFAULT: '#8f887b',
+          dim: '#56514a',
+        },
+        wine: {
+          DEFAULT: '#7d1f2e',
+          bright: '#a32639',
+          readable: '#d65d72',
+        },
+        gold: {
+          DEFAULT: '#b4924c',
         },
       },
       fontFamily: {
-        display: ['"Red Hat Display"', 'sans-serif'],
-        text: ['"Red Hat Text"', 'sans-serif'],
-      },
-      letterSpacing: {
-        tightest: '-0.04em',
+        display: ['"Archivo"', 'sans-serif'],
+        serif: ['"Instrument Serif"', 'Georgia', 'serif'],
+        mono: ['"IBM Plex Mono"', 'monospace'],
       },
     },
   },
   plugins: [],
 };
-

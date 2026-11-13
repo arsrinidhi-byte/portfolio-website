@@ -14,12 +14,12 @@ export default function Home() {
       period: "2021 — PRESENT",
       tenure: "4+ Years",
       location: "Bengaluru, India",
-      highlight: "0.5M+ sq. ft. sold",
+      highlight: "0.5M+ Sq. Ft. Sold",
       bullets: [
-        "Founded and direct Focal Town as a specialized real estate sales and marketing company.",
-        "Successfully facilitated the sale of over 0.5 million square feet of prime real estate space in Bengaluru.",
-        "Formulate developer go-to-market strategies, sales pricing architecture, and channel partner networks.",
-        "Lead client acquisition, project launches, customer negotiations, and transaction closures.",
+        "Founded and direct Focal Town as a specialized real estate sales and marketing company in Bengaluru.",
+        "Successfully facilitated the sale of over 0.5 million square feet of prime residential and commercial space.",
+        "Formulate full-spectrum marketing strategies, digital creative formation, targeted ad campaigns, and brand positioning.",
+        "Lead developer pricing architecture, client acquisition pipelines, customer negotiations, and transaction closures.",
       ],
     },
     {
@@ -30,11 +30,11 @@ export default function Home() {
       period: "2016 — 2019",
       tenure: "3 yrs 4 mos",
       location: "Bengaluru, India",
-      highlight: "Residential portfolios",
+      highlight: "Residential Portfolios",
       bullets: [
-        "Directed end-to-end sales and marketing initiatives across residential real estate portfolios.",
-        "Managed high-volume client inquiries, personalized property walkthroughs, and conversion velocity.",
-        "Built lasting client and channel partner relationships to secure repeat mandates and references.",
+        "Spearheaded integrated sales and marketing initiatives across residential real estate portfolios in Bengaluru.",
+        "Directed customer acquisition campaigns, creative promotional strategies, and lead-to-conversion workflows.",
+        "Managed high-volume prospective buyer walk-throughs and accelerated transaction turnaround times.",
       ],
     },
     {
@@ -45,11 +45,11 @@ export default function Home() {
       period: "2014 — 2015",
       tenure: "1 yr 1 mo",
       location: "Bangalore, India",
-      highlight: "Project inception to handover",
+      highlight: "Project Inception to Handover",
       bullets: [
-        "Nurtured builder operations from initial project development and launch planning to team management.",
-        "Formulated competitive property pricing, sales promotions, and managed on-ground sales force.",
-        "Facilitated buyer agreements, documentation, and handover processes.",
+        "Nurtured builder operations from land development, brand positioning, and pricing strategy to final sales.",
+        "Formulated multi-channel promotional campaigns, outdoor media, and directed on-ground sales teams.",
+        "Facilitated legal documentation, buyer sales agreements, and property handover procedures.",
       ],
     },
     {
@@ -60,11 +60,11 @@ export default function Home() {
       period: "2013 — 2014",
       tenure: "1 yr 2 mos",
       location: "Bangalore, India",
-      highlight: "High-value transactions",
+      highlight: "High-Value Real Estate",
       bullets: [
-        "Executed sales and business development for premium residential assets under the Assetz Group banner.",
-        "Engaged high-net-worth clients, guided site evaluations, and delivered presentation pitches.",
-        "Contributed to strategic marketing outreach and quarterly revenue targets.",
+        "Drove sales and market outreach for premium luxury residential developments under the Assetz banner.",
+        "Formulated bespoke marketing pitches and presentations for high-net-worth investors and buyers.",
+        "Met and exceeded quarterly revenue quotas through strategic buyer engagement and site visits.",
       ],
     },
     {
@@ -75,64 +75,58 @@ export default function Home() {
       period: "2010 — 2013",
       tenure: "2 yrs 8 mos",
       location: "Bangalore, India",
-      highlight: "Full-cycle sales & hoardings",
+      highlight: "Full-Cycle Sales & Campaigns",
       bullets: [
-        "Managed the complete sales cycle and consistently achieved assigned quarterly revenue quotas.",
-        "Assisted buyers in understanding property specs, agreements, and payment schedules.",
-        "Executed multi-channel marketing campaigns: direct mail, outbound calling, trade shows, and events.",
-        "Strategically selected and secured high-visibility outdoor hoardings and media placements.",
-        "Maintained relationships with channel partners to expand conversion ratios and referral networks.",
-        "Liaised with the engineering department to coordinate property inspections and seamless client handovers.",
+        "Executed comprehensive marketing and sales cycles, consistently meeting and exceeding quarterly revenue targets.",
+        "Managed large-scale advertising, prime outdoor hoarding media selection, direct mail, and promotional events.",
+        "Guided prospective homeowners through technical property specifications, agreements, and payment schedules.",
+        "Coordinated with the engineering division for seamless site quality checks and client handovers.",
       ],
     },
     {
       idx: "06",
       company: "Infosys BPO",
-      role: "Executive",
+      role: "Executive — Yahoo! Search Marketing",
       category: "MARKETING",
       period: "2007 — 2008",
-      tenure: "1 yr",
+      tenure: "1 Year",
       location: "Bengaluru, India",
-      highlight: "Yahoo! Search Marketing (PPC)",
+      highlight: "Digital Marketing & PPC",
       bullets: [
-        "Ad editor and content reviewer for the Yahoo! Search Marketing pay-per-click (PPC) platform.",
-        "Reviewed and approved advertiser listings in compliance with core Yahoo! editorial guidelines.",
-        "Provided floor support, handled quality checks, and trained new content development team members.",
+        "Ad editor and content reviewer for Yahoo! Search Marketing Pay-Per-Click (PPC) campaigns.",
+        "Evaluated creative advertising copy, search intent, and compliance with core Yahoo! editorial guidelines.",
+        "Provided operational floor support, content review quality control, and trained new team members.",
       ],
     },
   ];
 
   const skills = [
-    "Real Estate Sales",
-    "Builder Representation",
-    "Go-To-Market Strategy",
-    "Pricing Architecture",
-    "Channel Partner Alliances",
-    "Deal Structuring & Closing",
-    "High-Value Negotiations",
-    "Outdoor Hoarding Placements",
-    "Digital & Direct Campaigns",
-    "Lead Generation Velocity",
-    "Client Agreement Management",
-    "Property Handover Coordination",
+    { name: "Digital Marketing & Creative Formation", highlight: true },
+    { name: "Market Intelligence & Brand Positioning", highlight: true },
+    { name: "Real Estate Sales & Deal Closures", highlight: false },
+    { name: "Builder Representation", highlight: false },
+    { name: "Go-To-Market Strategy", highlight: false },
+    { name: "Pricing Architecture", highlight: false },
+    { name: "Creative Campaign Strategy", highlight: false },
+    { name: "High-Value Negotiations", highlight: false },
+    { name: "Outdoor Hoarding & Media Execution", highlight: false },
+    { name: "Lead Generation Velocity", highlight: false },
+    { name: "Client Agreement Management", highlight: false },
+    { name: "Property Handover Coordination", highlight: false },
   ];
 
   return (
     <div className="min-h-screen bg-[#0a0908] text-[#e8e4dc] selection:bg-[#7d1f2e] selection:text-[#e8e4dc]">
       
-      {/* ===================================================================
-          1. NAVIGATION (harshith.com exact fixed grid nav)
-          =================================================================== */}
+      {/* 1. NAVIGATION */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-[#0a0908]/90 backdrop-blur-md border-b border-[#e8e4dc]/15 px-6 md:px-12 py-4">
         <div className="max-w-[100rem] mx-auto flex items-center justify-between">
           
-          {/* Brand */}
           <a href="#hero" className="font-display font-extrabold text-xl md:text-2xl tracking-tight text-[#e8e4dc] flex items-center gap-1 group">
-            <span>SRINIDHI A.R.</span>
-            <sup className="text-[10px] font-mono text-[#b4924c] tracking-widest font-normal">SR</sup>
+            <span>A.R. SRINIDHI</span>
+            <sup className="text-[10px] font-mono text-[#b4924c] tracking-widest font-normal">AR</sup>
           </a>
 
-          {/* Desktop Nav Links */}
           <nav className="hidden md:flex items-center gap-8">
             <a href="#about" className="nav__link">About</a>
             <a href="#venture" className="nav__link">Focal Town</a>
@@ -141,26 +135,20 @@ export default function Home() {
             <a href="#contact" className="nav__link">Contact</a>
           </nav>
 
-          {/* Action Button */}
-          <div className="flex items-center gap-4">
-            <a
-              href="#contact"
-              className="inline-flex items-center gap-2 text-xs md:text-sm font-mono uppercase tracking-wider text-[#e8e4dc] border border-[#e8e4dc]/25 px-4 py-2 hover:bg-[#e8e4dc] hover:text-[#0a0908] transition-all duration-300"
-            >
-              <span>Get In Touch</span>
-              <span className="text-[#d65d72]">↗</span>
-            </a>
-          </div>
+          <a
+            href="#contact"
+            className="inline-flex items-center gap-2 text-xs md:text-sm font-mono uppercase tracking-wider text-[#e8e4dc] border border-[#e8e4dc]/25 px-4 py-2 hover:bg-[#e8e4dc] hover:text-[#0a0908] transition-all duration-300"
+          >
+            <span>Get In Touch</span>
+            <span className="text-[#d65d72]">↗</span>
+          </a>
 
         </div>
       </header>
 
-      {/* ===================================================================
-          2. HERO SECTION (harshith.com ambient radial beam, mono tags, title)
-          =================================================================== */}
-      <section id="hero" className="relative min-h-[100svh] pt-32 pb-20 px-6 md:px-12 flex flex-col justify-between overflow-hidden">
+      {/* 2. HERO SECTION (Brackets removed from the top) */}
+      <section id="hero" className="relative min-h-[90svh] pt-32 pb-20 px-6 md:px-12 flex flex-col justify-between overflow-hidden">
         
-        {/* Ambient Top Radial Beam */}
         <div 
           className="pointer-events-none absolute top-[-10%] left-1/2 -translate-x-1/2 w-[120vmax] h-[120vmax] z-0 opacity-70"
           style={{
@@ -168,32 +156,23 @@ export default function Home() {
           }}
         />
 
-        {/* Top Monospace Metadata */}
-        <div className="relative z-10 max-w-[100rem] mx-auto w-full flex flex-wrap justify-between items-center text-xs font-mono tracking-widest uppercase text-[#8f887b] pt-4 pb-12 border-b border-[#e8e4dc]/10">
-          <div>[ BENGALURU, KARNATAKA, INDIA ]</div>
-          <div className="hidden sm:block">[ REAL ESTATE SALES &amp; MARKETING ]</div>
-          <div>[ 15+ YEARS PRACTICE ]</div>
-        </div>
-
-        {/* Central Display Title */}
-        <div className="relative z-10 max-w-[100rem] mx-auto w-full my-auto py-12 md:py-20">
+        <div className="relative z-10 max-w-[100rem] mx-auto w-full my-auto py-12 md:py-16">
           <div className="text-xs md:text-sm font-mono uppercase tracking-[0.2em] text-[#b4924c] mb-4">
             Founder at Focal Town
           </div>
           
           <h1 className="font-display font-black text-[13vw] sm:text-[11vw] md:text-[9.5vw] uppercase tracking-[-0.035em] text-[#e8e4dc] leading-[0.88] mb-6">
-            SRINIDHI A.R.
+            A.R. SRINIDHI
           </h1>
 
           <p className="font-serif-it text-2xl sm:text-3xl md:text-5xl text-[#d8d2c6] max-w-4xl leading-tight">
-            Seasoned real estate leader <span className="text-[#b4924c]">architecting sales mandates</span>, builder marketing, and high-value transactions.
+            Seasoned real estate leader <span className="text-[#b4924c]">architecting sales mandates</span>, digital marketing, and high-value transactions.
           </p>
         </div>
 
-        {/* Bottom Bar: Intro summary & animated scroll indicator */}
         <div className="relative z-10 max-w-[100rem] mx-auto w-full grid grid-cols-1 md:grid-cols-12 gap-8 items-end pt-8 border-t border-[#e8e4dc]/10">
           <div className="md:col-span-8 text-sm md:text-base text-[#8f887b] max-w-2xl leading-relaxed">
-            Leading sales and marketing advisory for builders and high-value property buyers in Bengaluru. Over <strong className="text-[#e8e4dc]">0.5 million square feet</strong> transacted under Focal Town since 2021.
+            Leading sales and digital marketing advisory for builders and discerning property buyers in Bengaluru. Over <strong className="text-[#e8e4dc]">0.5 million square feet</strong> transacted under Focal Town since 2021.
           </div>
 
           <div className="md:col-span-4 flex justify-start md:justify-end items-center gap-3 text-xs font-mono uppercase tracking-widest text-[#8f887b]">
@@ -206,9 +185,7 @@ export default function Home() {
 
       </section>
 
-      {/* ===================================================================
-          3. MANIFESTO / ABOUT (harshith.com statement + dual-column + stats)
-          =================================================================== */}
+      {/* 3. MANIFESTO / ABOUT */}
       <section id="about" className="py-24 md:py-36 px-6 md:px-12 border-t border-[#e8e4dc]/10 bg-[#0a0908]">
         <div className="max-w-[100rem] mx-auto">
           
@@ -216,23 +193,21 @@ export default function Home() {
             01 / MANIFESTO &amp; BACKGROUND
           </div>
 
-          {/* Large Statement with Serif Italic Accents */}
           <h2 className="font-display font-bold text-[clamp(2rem,5vw,4.25rem)] uppercase text-[#e8e4dc] leading-[1.08] tracking-[-0.025em] max-w-5xl mb-16 md:mb-24">
-            DRIVING REAL ESTATE GROWTH THROUGH <span className="font-serif-it text-[#b4924c] normal-case">precise market pricing</span>, BUILDER REPUTATION, AND <span className="font-serif-it text-[#d65d72] normal-case">uncompromising execution</span>.
+            DRIVING REAL ESTATE GROWTH THROUGH <span className="font-serif-it text-[#b4924c] normal-case">creative marketing</span>, DEEP MARKET INTELLIGENCE, AND <span className="font-serif-it text-[#d65d72] normal-case">uncompromising execution</span>.
           </h2>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             
-            {/* Left Bio Column */}
             <div className="lg:col-span-7 space-y-6 text-base md:text-lg text-[#8f887b] leading-relaxed">
               <p>
-                I am a seasoned Real Estate Sales and Marketing professional based in <strong className="text-[#e8e4dc]">Bengaluru, Karnataka, India</strong> with over 15 years of rich experience spanning top developers, direct builder nurturing, and independent agency ownership.
+                I am a seasoned Real Estate Sales and Marketing professional based in <strong className="text-[#e8e4dc]">Bengaluru, Karnataka, India</strong> with over 15 years of rich experience spanning top developers, direct builder advisory, and independent agency ownership.
               </p>
               <p>
-                My professional foundation was developed across respected industry giants including <strong className="text-[#e8e4dc]">Brigade Group</strong>, <strong className="text-[#e8e4dc]">Assetz Group</strong>, <strong className="text-[#e8e4dc]">Gowri Construction</strong>, and <strong className="text-[#e8e4dc]">HomzNSpace</strong>—managing end-to-end sales cycles, high-impact hoardings, client negotiations, agreements, and property handovers.
+                My professional foundation was developed across respected industry leaders including <strong className="text-[#e8e4dc]">Brigade Group</strong>, <strong className="text-[#e8e4dc]">Assetz Group</strong>, <strong className="text-[#e8e4dc]">Gowri Construction</strong>, and <strong className="text-[#e8e4dc]">HomzNSpace</strong>—managing end-to-end sales cycles, targeted digital campaigns, high-impact outdoor hoardings, client negotiations, agreements, and property handovers.
               </p>
               <p>
-                In January 2021, I founded <strong className="text-[#e8e4dc]">Focal Town</strong>, bringing structured marketing, transparent advisory, and high velocity to real estate transactions.
+                In January 2021, I founded <strong className="text-[#e8e4dc]">Focal Town</strong>, bringing creative marketing formation, deep market understanding, transparent advisory, and high velocity to real estate transactions.
               </p>
               <p>
                 Academic credentials include an <strong className="text-[#e8e4dc]">MBA in Finance</strong> from the University of Mysore, a Bachelor of Business Administration in Marketing, and P.B.M (Marketing).
@@ -247,7 +222,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right Stats Column (harshith.com border-top stat blocks) */}
             <div className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6">
               
               <div className="border-t border-[#e8e4dc]/20 pt-4 group transition-colors duration-300 hover:border-[#b4924c]">
@@ -293,12 +267,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===================================================================
-          4. FEATURED VENTURE: FOCAL TOWN
-          =================================================================== */}
+      {/* 4. FEATURED VENTURE: FOCAL TOWN (Marketing & Creative Formation Pillar) */}
       <section id="venture" className="py-24 md:py-32 px-6 md:px-12 border-t border-[#e8e4dc]/10 bg-[#14120f] relative overflow-hidden">
         
-        {/* Subtle radial ambient highlight */}
         <div 
           className="pointer-events-none absolute inset-0 z-0 opacity-40"
           style={{
@@ -328,7 +299,7 @@ export default function Home() {
               </p>
 
               <p className="text-base sm:text-lg text-[#8f887b] leading-relaxed mb-8 max-w-2xl">
-                Founded in January 2021, Focal Town was created to solve core sales execution challenges for builders. Over the past 4 years, Focal Town has built a trusted reputation across Bengaluru, successfully closing more than <strong>0.5 million square feet</strong> of real estate space.
+                Founded in January 2021, Focal Town was created to solve core sales execution and marketing challenges for builders. With a deep understanding of evolving buyer behavior, digital channels, and market dynamics across Bengaluru, Focal Town has successfully closed more than <strong>0.5 million square feet</strong> of premier real estate space.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-6 border-t border-[#e8e4dc]/15">
@@ -342,38 +313,29 @@ export default function Home() {
                 </div>
                 <div>
                   <div className="text-xs font-mono uppercase tracking-wider text-[#8f887b]">Scope</div>
-                  <div className="text-xl font-bold text-[#e8e4dc] mt-1">Sales &amp; Strategy</div>
+                  <div className="text-xl font-bold text-[#e8e4dc] mt-1">Sales &amp; Marketing</div>
                 </div>
               </div>
             </div>
 
-            {/* Right Card / Graphic Box */}
             <div className="lg:col-span-5 bg-[#0a0908] border border-[#e8e4dc]/15 p-8 md:p-10 relative">
               <div className="text-xs font-mono uppercase tracking-widest text-[#b4924c] mb-4">
-                Core Pillars
+                Core Operating Pillars
               </div>
               <ul className="space-y-4 text-sm md:text-base text-[#d8d2c6]">
                 <li className="flex items-start gap-3">
                   <span className="text-[#d65d72] font-mono">01</span>
-                  <span><strong>Pricing Strategy:</strong> Scientifically calibrated pricing models aligned with localized market demand.</span>
+                  <span><strong>Pricing Architecture:</strong> Scientifically calibrated pricing models aligned with localized market demand and micro-market analysis.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-[#d65d72] font-mono">02</span>
-                  <span><strong>Channel Alliances:</strong> Deep network of trusted channel partners driving steady referral volume.</span>
+                  <span><strong>Digital Marketing &amp; Creative Formation:</strong> Deep market understanding and full-spectrum marketing expertise—orchestrating targeted digital campaigns, creative brand formation, performance marketing, and high-impact visual storytelling that connect directly with qualified property buyers.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-[#d65d72] font-mono">03</span>
-                  <span><strong>Transaction Velocity:</strong> Structured lead handling to accelerate customer site visits into closed agreements.</span>
+                  <span><strong>Transaction Velocity:</strong> Structured lead qualification and strategic sales workflows to accelerate customer site visits into closed agreements.</span>
                 </li>
               </ul>
-
-              <div className="mt-8 pt-6 border-t border-[#e8e4dc]/10 flex items-center justify-between text-xs font-mono uppercase text-[#8f887b]">
-                <span>Status: Active Mandates</span>
-                <span className="text-[#4ade80] flex items-center gap-1.5">
-                  <span className="w-2 h-2 rounded-full bg-[#4ade80] animate-pulse" />
-                  Operating
-                </span>
-              </div>
             </div>
 
           </div>
@@ -381,9 +343,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===================================================================
-          5. SELECTED WORK EXPERIENCE (Exact harshith.com .works & .work-row)
-          =================================================================== */}
+      {/* 5. SELECTED WORK EXPERIENCE (Interactive Accordion Tabs on Hover) */}
       <section id="experience" className="py-24 md:py-36 px-6 md:px-12 border-t border-[#e8e4dc]/10 bg-[#0a0908]">
         <div className="max-w-[100rem] mx-auto">
           
@@ -391,68 +351,84 @@ export default function Home() {
             03 / SELECTED EXPERIENCE
           </div>
 
-          <p className="text-xs font-mono uppercase tracking-widest text-[#8f887b] mb-8">
-            Click any row to inspect role details &amp; achievements
+          <p className="text-xs font-mono uppercase tracking-widest text-[#b4924c] mb-8">
+            HOVER OVER ANY ROLE TO EXPAND DETAILS
           </p>
 
-          {/* Interactive Ledger Rows */}
-          <div className="border-t border-[#e8e4dc]/15 mb-12">
-            {experiences.map((exp, index) => (
-              <div
-                key={index}
-                onClick={() => setActiveExp(index)}
-                className={`work-row ${activeExp === index ? "is-active" : ""}`}
-              >
-                <span className="work-row__idx">{exp.idx}</span>
-                <span className="work-row__title">
-                  {exp.company}
-                  <em>{exp.role}</em>
-                </span>
-                <span className="work-row__cat">{exp.category}</span>
-                <span className="work-row__year">{exp.period}</span>
-                <span className="work-row__arrow">→</span>
-              </div>
-            ))}
-          </div>
+          <div className="border-t border-[#e8e4dc]/15 flex flex-col">
+            {experiences.map((exp, index) => {
+              const isActive = activeExp === index;
+              return (
+                <div
+                  key={index}
+                  onMouseEnter={() => setActiveExp(index)}
+                  onClick={() => setActiveExp(isActive ? -1 : index)}
+                  className="border-b border-[#e8e4dc]/12 transition-all duration-300"
+                >
+                  {/* Row Header */}
+                  <div
+                    className={`grid grid-cols-[2.5rem_1fr_auto_1.5rem] md:grid-cols-[3.5rem_1fr_auto_auto_2rem] items-center gap-3 md:gap-6 p-4 md:p-6 cursor-pointer relative overflow-hidden transition-all duration-300 ${
+                      isActive ? "bg-[#e8e4dc] text-[#0a0908]" : "hover:bg-[#14120f] text-[#e8e4dc]"
+                    }`}
+                  >
+                    <span className={`font-mono text-xs tracking-widest ${isActive ? "text-[#56514a]" : "text-[#8f887b]"}`}>
+                      {exp.idx}
+                    </span>
 
-          {/* Role Inspection Drawer / Card */}
-          <div className="bg-[#14120f] border border-[#e8e4dc]/15 p-8 md:p-12 relative">
-            <div className="flex flex-wrap items-baseline justify-between gap-4 pb-6 border-b border-[#e8e4dc]/10 mb-6">
-              <div>
-                <div className="text-xs font-mono uppercase tracking-widest text-[#d65d72] mb-1">
-                  {experiences[activeExp].idx} · {experiences[activeExp].category}
+                    <span className="font-display font-bold uppercase text-lg sm:text-2xl md:text-3xl tracking-tight flex items-baseline flex-wrap gap-2">
+                      <span>{exp.company}</span>
+                      <em className={`font-serif italic font-normal text-sm sm:text-lg ${isActive ? "text-[#7d1f2e]" : "text-[#d65d72]"}`}>
+                        {exp.role}
+                      </em>
+                    </span>
+
+                    <span className={`hidden md:block font-mono text-xs uppercase tracking-wider ${isActive ? "text-[#56514a]" : "text-[#8f887b]"}`}>
+                      {exp.category}
+                    </span>
+
+                    <span className={`font-mono text-xs uppercase tracking-wider ${isActive ? "text-[#56514a]" : "text-[#8f887b]"}`}>
+                      {exp.period}
+                    </span>
+
+                    <span className={`font-mono text-base font-bold transition-transform duration-300 text-right ${isActive ? "rotate-45 text-[#0a0908]" : "text-[#8f887b]"}`}>
+                      +
+                    </span>
+                  </div>
+
+                  {/* Expandable Inline Tab Content */}
+                  <div
+                    className={`overflow-hidden transition-all duration-300 bg-[#14120f] border-l-4 border-[#b4924c] ${
+                      isActive ? "max-h-[500px] p-6 md:p-8 opacity-100" : "max-h-0 p-0 opacity-0"
+                    }`}
+                  >
+                    <div className="flex flex-wrap justify-between items-center gap-4 pb-4 mb-4 border-b border-[#e8e4dc]/10 text-xs font-mono uppercase">
+                      <div className="text-[#8f887b]">
+                        {exp.period} · {exp.tenure} · {exp.location}
+                      </div>
+                      <div className="px-2.5 py-1 bg-[#1d1a16] border border-[#b4924c]/40 text-[#b4924c] font-semibold">
+                        {exp.highlight}
+                      </div>
+                    </div>
+
+                    <ul className="space-y-3 text-sm md:text-base text-[#d8d2c6] max-w-4xl">
+                      {exp.bullets.map((bullet, bIdx) => (
+                        <li key={bIdx} className="flex items-start gap-3">
+                          <span className="text-[#b4924c] font-mono mt-0.5">›</span>
+                          <span>{bullet}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
                 </div>
-                <h3 className="font-display font-extrabold text-2xl sm:text-3xl md:text-4xl uppercase text-[#e8e4dc]">
-                  {experiences[activeExp].company}
-                </h3>
-                <div className="font-serif-it text-xl sm:text-2xl text-[#b4924c] mt-1">
-                  {experiences[activeExp].role}
-                </div>
-              </div>
-
-              <div className="text-left md:text-right font-mono text-xs uppercase tracking-wider text-[#8f887b]">
-                <div className="text-[#e8e4dc] font-bold">{experiences[activeExp].period}</div>
-                <div>{experiences[activeExp].tenure}</div>
-                <div>{experiences[activeExp].location}</div>
-              </div>
-            </div>
-
-            <ul className="space-y-3 text-sm sm:text-base text-[#d8d2c6] max-w-4xl">
-              {experiences[activeExp].bullets.map((b, bIdx) => (
-                <li key={bIdx} className="flex items-start gap-3">
-                  <span className="text-[#b4924c] font-mono mt-1">›</span>
-                  <span>{b}</span>
-                </li>
-              ))}
-            </ul>
+              );
+            })}
           </div>
 
         </div>
       </section>
 
-      {/* ===================================================================
-          6. CAPABILITIES & ACADEMIC CREDENTIALS
-          =================================================================== */}
+      {/* 6. CAPABILITIES & ACADEMIC CREDENTIALS */}
       <section id="capabilities" className="py-24 md:py-36 px-6 md:px-12 border-t border-[#e8e4dc]/10 bg-[#0a0908]">
         <div className="max-w-[100rem] mx-auto">
           
@@ -462,7 +438,6 @@ export default function Home() {
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
             
-            {/* Skills Tags */}
             <div className="lg:col-span-7">
               <h3 className="font-display font-bold text-2xl md:text-3xl uppercase text-[#e8e4dc] mb-8">
                 Core Competencies
@@ -472,9 +447,13 @@ export default function Home() {
                 {skills.map((skill, sIdx) => (
                   <span
                     key={sIdx}
-                    className="font-mono text-xs md:text-sm uppercase tracking-wider px-3.5 py-2 bg-[#14120f] border border-[#e8e4dc]/15 text-[#d8d2c6] hover:border-[#b4924c] hover:text-[#b4924c] transition-colors duration-200"
+                    className={`font-mono text-xs md:text-sm uppercase tracking-wider px-3.5 py-2 border transition-colors duration-200 ${
+                      skill.highlight
+                        ? "bg-[#1d1a16] border-[#b4924c]/50 text-[#b4924c]"
+                        : "bg-[#14120f] border-[#e8e4dc]/15 text-[#d8d2c6] hover:border-[#b4924c] hover:text-[#b4924c]"
+                    }`}
                   >
-                    {skill}
+                    {skill.name}
                   </span>
                 ))}
               </div>
@@ -492,7 +471,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Education Timeline */}
             <div className="lg:col-span-5 bg-[#14120f] border border-[#e8e4dc]/15 p-8 md:p-10">
               <h3 className="font-display font-bold text-2xl uppercase text-[#e8e4dc] mb-8">
                 Academic Qualifications
@@ -536,12 +514,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===================================================================
-          7. FOOTER / CONTACT (harshith.com exact footer with radial glow)
-          =================================================================== */}
+      {/* 7. FOOTER / CONTACT */}
       <footer id="contact" className="relative pt-24 md:pt-36 pb-12 px-6 md:px-12 bg-[#0a0908] border-t border-[#e8e4dc]/10 overflow-hidden">
         
-        {/* Wine Radial Ambient Glow in Footer */}
         <div 
           className="pointer-events-none absolute inset-0 z-0 opacity-40"
           style={{
@@ -551,18 +526,15 @@ export default function Home() {
 
         <div className="relative z-10 max-w-[100rem] mx-auto text-center">
           
-          {/* Status Kicker */}
           <div className="inline-flex items-center gap-2.5 text-xs font-mono uppercase tracking-widest text-[#8f887b] mb-8">
             <span className="w-2 h-2 rounded-full bg-[#4ade80] animate-pulse-dot" />
-            <span>AVAILABLE FOR REAL ESTATE MANDATES &amp; ADVISORY</span>
+            <span>AVAILABLE FOR REAL ESTATE MANDATES &amp; MARKETING ADVISORY</span>
           </div>
 
-          {/* Huge Footer Title */}
           <h2 className="font-display font-black text-[clamp(2.5rem,10vw,9.5rem)] uppercase text-[#e8e4dc] leading-[0.9] tracking-[-0.03em] mb-8">
             LET'S TALK <span className="font-serif-it text-[#d65d72] normal-case">Real Estate</span>
           </h2>
 
-          {/* Big Interactive Email Link */}
           <div className="mb-12">
             <a
               href="mailto:a.r.srinidhi@gmail.com"
@@ -572,7 +544,6 @@ export default function Home() {
             </a>
           </div>
 
-          {/* Circular Social Buttons in Wine Color */}
           <div className="flex justify-center items-center gap-4 mb-20">
             <a
               href="mailto:a.r.srinidhi@gmail.com"
@@ -603,9 +574,8 @@ export default function Home() {
             </a>
           </div>
 
-          {/* Bottom Legal Bar */}
           <div className="pt-8 border-t border-[#e8e4dc]/10 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs font-mono uppercase tracking-wider text-[#8f887b]">
-            <div>© {new Date().getFullYear()} Srinidhi A.R. · Founder at Focal Town</div>
+            <div>© {new Date().getFullYear()} A.R. Srinidhi · Founder at Focal Town</div>
             <div>Bengaluru, Karnataka, India</div>
             <a href="#hero" className="hover:text-[#e8e4dc] transition-colors">Back to top ↑</a>
           </div>

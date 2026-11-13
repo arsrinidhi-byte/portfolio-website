@@ -1,9 +1,9 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Srinidhi A.R. — Real Estate Sales Leader & Founder of Focal Town",
-  description: "Personal portfolio of Srinidhi A.R., Founder of Focal Town with 15+ years of real estate sales and marketing leadership in Bengaluru, India.",
-  keywords: ["Real Estate", "Bengaluru", "Focal Town", "Srinidhi A.R.", "Sales Leadership", "Property Marketing"],
+  title: "A.R. Srinidhi — Real Estate Sales Leader & Founder of Focal Town",
+  description: "Personal portfolio of A.R. Srinidhi, Founder of Focal Town with 15+ years of real estate sales and digital marketing leadership in Bengaluru, India.",
+  keywords: ["Real Estate", "Bengaluru", "Focal Town", "A.R. Srinidhi", "Sales Leadership", "Digital Marketing"],
 };
 
 export default function RootLayout({ children }) {

@@ -1,5 +1,5 @@
 /* ===================================================================
-   Srinidhi A.R. - Portfolio Stylesheet
+   Srinidhi A.R. -> A.R. Srinidhi Portfolio Stylesheet
    Theme: HARSHITH.COM DARK LUXURY AESTHETIC
    Palette: Obsidian Ink, Warm Bone, Wine Accent, Antique Gold
    Typography: Archivo, Instrument Serif, IBM Plex Mono
@@ -180,7 +180,7 @@ a {
 /* Hero Section */
 .hero {
   position: relative;
-  min-height: 100svh;
+  min-height: 92svh;
   padding-top: 140px;
   padding-bottom: 60px;
   display: flex;
@@ -199,18 +199,6 @@ a {
   height: 120vmax;
   background: radial-gradient(40% 50% at 50% 18%, rgba(232, 228, 220, 0.08), transparent 65%);
   z-index: 0;
-}
-
-.hero-meta-row {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: var(--smoke);
-  padding-bottom: 1.5rem;
-  border-bottom: 1px solid rgba(232, 228, 220, 0.1);
-  font-size: 0.75rem;
 }
 
 .hero-body {
@@ -550,39 +538,53 @@ a {
   color: var(--wine-readable);
 }
 
-/* Work Rows (Exact harshith.com hover experience) */
-.works-list {
-  border-top: 1px solid rgba(232, 228, 220, 0.12);
-  margin-bottom: 2.5rem;
+/* Experience Section - Interactive Accordion Hover Drawers */
+.experience-hint {
+  font-family: var(--f-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.works-accordion {
+  border-top: 1px solid rgba(232, 228, 220, 0.15);
+  display: flex;
+  flex-direction: column;
+}
+
+.work-item {
+  border-bottom: 1px solid rgba(232, 228, 220, 0.12);
+  transition: all 0.3s var(--ease-out);
 }
 
 .work-row {
   isolation: isolate;
-  border-bottom: 1px solid rgba(232, 228, 220, 0.12);
   display: grid;
-  grid-template-columns: 3.5rem minmax(0, 1fr) auto auto;
+  grid-template-columns: 3.5rem minmax(0, 1fr) auto auto 2rem;
   align-items: center;
   gap: 1.5rem;
-  padding: clamp(1.4rem, 2.8vw, 2.2rem) 0.8rem;
+  padding: clamp(1.3rem, 2.4vw, 1.9rem) 0.8rem;
   position: relative;
   overflow: hidden;
-  transition: all 0.3s var(--ease-out);
   cursor: pointer;
+  transition: all 0.3s var(--ease-out);
 }
 
 .work-row:before {
   content: "";
   background: var(--bone);
   transform-origin: bottom;
-  transition: transform 0.45s var(--ease-luxe);
+  transition: transform 0.4s var(--ease-luxe);
   z-index: 0;
   position: absolute;
   inset: 0;
   transform: scaleY(0);
 }
 
-.work-row:hover:before,
-.work-row.active:before {
+.work-item.active .work-row:before,
+.work-item:hover .work-row:before {
   transform-origin: top;
   transform: scaleY(1);
 }
@@ -602,7 +604,7 @@ a {
   text-transform: uppercase;
   letter-spacing: -0.025em;
   color: var(--bone);
-  font-size: clamp(1.35rem, 1rem + 2vw, 2.6rem);
+  font-size: clamp(1.3rem, 0.95rem + 1.8vw, 2.4rem);
   line-height: 1.1;
   display: inline-flex;
   align-items: baseline;
@@ -610,7 +612,7 @@ a {
   gap: 0.4rem 0.85rem;
   position: relative;
   z-index: 1;
-  transition: color 0.3s, transform 0.45s var(--ease-luxe);
+  transition: color 0.3s, transform 0.4s var(--ease-luxe);
 }
 
 .work-row__title em {
@@ -636,92 +638,98 @@ a {
   transition: color 0.3s;
 }
 
-.work-row__arrow {
-  opacity: 0;
-  color: var(--ink);
-  transition: transform 0.45s var(--ease-luxe), opacity 0.3s;
-  font-size: 1.5rem;
-  position: absolute;
-  right: 1.25rem;
-  top: 50%;
-  transform: translate(1.5rem, -50%);
-  z-index: 2;
+.work-row__toggle {
+  font-family: var(--f-mono);
+  font-size: 1.25rem;
+  color: var(--smoke);
+  position: relative;
+  z-index: 1;
+  text-align: right;
+  transition: transform 0.3s var(--ease-out), color 0.3s;
 }
 
-.work-row:hover .work-row__title,
-.work-row.active .work-row__title {
+.work-item.active .work-row__title,
+.work-item:hover .work-row__title {
   color: var(--ink);
-  transform: translateX(1rem);
+  transform: translateX(0.85rem);
 }
 
-.work-row:hover .work-row__title em,
-.work-row.active .work-row__title em {
+.work-item.active .work-row__title em,
+.work-item:hover .work-row__title em {
   color: var(--wine);
 }
 
-.work-row:hover .work-row__idx,
-.work-row:hover .work-row__cat,
-.work-row:hover .work-row__year,
-.work-row.active .work-row__idx,
-.work-row.active .work-row__cat,
-.work-row.active .work-row__year {
+.work-item.active .work-row__idx,
+.work-item.active .work-row__cat,
+.work-item.active .work-row__year,
+.work-item:hover .work-row__idx,
+.work-item:hover .work-row__cat,
+.work-item:hover .work-row__year {
   color: var(--smoke-dim);
 }
 
-.work-row:hover .work-row__arrow,
-.work-row.active .work-row__arrow {
+.work-item.active .work-row__toggle {
+  color: var(--ink);
+  transform: rotate(45deg);
+}
+
+/* Expandable Inline Drawer */
+.work-drawer {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  background: #14120f;
+  border-left: 3px solid var(--gold);
+  transition: max-height 0.4s var(--ease-out), opacity 0.35s ease, padding 0.35s ease;
+  padding: 0 2rem;
+}
+
+.work-item.active .work-drawer {
+  max-height: 520px;
   opacity: 1;
-  transform: translate(0, -50%);
+  padding: 1.75rem 2rem 2.25rem 2rem;
 }
 
-/* Detail Drawer */
-.role-drawer {
-  background: var(--ink-2);
-  border: 1px solid rgba(232, 228, 220, 0.15);
-  padding: 2.5rem;
-}
-
-.drawer-head {
+.drawer-header-row {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
-  padding-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1.25rem;
   border-bottom: 1px solid rgba(232, 228, 220, 0.1);
-  margin-bottom: 1.5rem;
 }
 
-.drawer-company {
-  font-size: 1.85rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  color: var(--bone);
-}
-
-.drawer-role {
-  font-family: var(--f-serif);
-  font-style: italic;
-  font-size: 1.35rem;
-  color: var(--gold);
-}
-
-.drawer-meta {
+.drawer-badge {
   font-family: var(--f-mono);
   font-size: 0.75rem;
   text-transform: uppercase;
   color: var(--smoke);
+  letter-spacing: 0.05em;
+}
+
+.drawer-highlight {
+  font-family: var(--f-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.25rem 0.75rem;
+  background: var(--ink-3);
+  color: var(--gold);
+  border: 1px solid rgba(180, 146, 76, 0.3);
 }
 
 .drawer-bullets {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 0.85rem;
 }
 
 .drawer-bullets li {
   display: flex;
+  align-items: flex-start;
   gap: 0.75rem;
   font-size: 0.95rem;
   color: var(--bone-2);
@@ -731,6 +739,7 @@ a {
 .bullet-icon {
   color: var(--gold);
   font-family: var(--f-mono);
+  font-weight: bold;
 }
 
 /* Capabilities Grid */
@@ -757,6 +766,12 @@ a {
   border: 1px solid rgba(232, 228, 220, 0.15);
   color: var(--bone-2);
   transition: all 0.2s;
+}
+
+.skill-tag.highlight {
+  border-color: rgba(180, 146, 76, 0.4);
+  color: var(--gold);
+  background: rgba(180, 146, 76, 0.08);
 }
 
 .skill-tag:hover {
@@ -926,5 +941,18 @@ a {
   }
   .nav-menu {
     display: none;
+  }
+  .work-row {
+    grid-template-columns: 2.5rem minmax(0, 1fr) auto 1.5rem;
+    gap: 0.75rem;
+  }
+  .work-row__cat {
+    display: none;
+  }
+  .work-drawer {
+    padding: 0 1.25rem;
+  }
+  .work-item.active .work-drawer {
+    padding: 1.25rem;
   }
 }

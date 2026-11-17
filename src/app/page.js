@@ -8,7 +8,7 @@ export default function Home() {
   // Easily update your contact details here
   const contactInfo = {
     email: "a.r.srinidhi@gmail.com",
-    mobileNumber: "+91 98860 00000", // <-- Put your mobile number here
+    mobileNumber: "+91 98862 30987",
   };
 
   const experiences = [

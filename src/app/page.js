@@ -5,6 +5,12 @@ import { useState } from "react";
 export default function Home() {
   const [activeExp, setActiveExp] = useState(0);
 
+  // Easily update your contact details here
+  const contactInfo = {
+    email: "a.r.srinidhi@gmail.com",
+    mobileNumber: "+91 98860 00000", // <-- Put your mobile number here
+  };
+
   const experiences = [
     {
       idx: "01",
@@ -16,10 +22,10 @@ export default function Home() {
       location: "Bengaluru, India",
       highlight: "0.5M+ Sq. Ft. Sold",
       bullets: [
-        "Founded and direct Focal Town as a specialized real estate sales and marketing company in Bengaluru.",
-        "Successfully facilitated the sale of over 0.5 million square feet of prime residential and commercial space.",
-        "Formulate full-spectrum marketing strategies, digital creative formation, targeted ad campaigns, and brand positioning.",
-        "Lead developer pricing architecture, client acquisition pipelines, customer negotiations, and transaction closures.",
+        "Founder and organizational leader of Focal Town, steering a specialized real estate sales and marketing company alongside a team of passionate, high-performing sales professionals.",
+        "Successfully facilitated the sale of over 0.5 million square feet of prime residential and commercial real estate space across Bengaluru.",
+        "Formulate full-spectrum marketing strategies, digital creative formation, targeted advertising campaigns, and market positioning.",
+        "Lead developer pricing architecture, buyer acquisition pipelines, high-value client negotiations, and transaction closures.",
       ],
     },
     {
@@ -32,9 +38,10 @@ export default function Home() {
       location: "Bengaluru, India",
       highlight: "Residential Portfolios",
       bullets: [
-        "Spearheaded integrated sales and marketing initiatives across residential real estate portfolios in Bengaluru.",
-        "Directed customer acquisition campaigns, creative promotional strategies, and lead-to-conversion workflows.",
-        "Managed high-volume prospective buyer walk-throughs and accelerated transaction turnaround times.",
+        "Spearheaded the entire sales and marketing team, establishing high-performance standards to actively drive transaction velocity and overall revenue growth for the company.",
+        "Directed integrated sales and marketing initiatives across diverse residential real estate portfolios in Bengaluru.",
+        "Formulated targeted customer acquisition campaigns, creative promotional strategies, and lead-to-conversion workflows.",
+        "Managed high-volume prospective buyer walk-throughs and consistently accelerated transaction turnaround times.",
       ],
     },
     {
@@ -47,7 +54,7 @@ export default function Home() {
       location: "Bangalore, India",
       highlight: "Project Inception to Handover",
       bullets: [
-        "Nurtured builder operations from land development, brand positioning, and pricing strategy to final sales.",
+        "Nurtured builder operations from land development, brand positioning, and pricing strategy to final sales execution.",
         "Formulated multi-channel promotional campaigns, outdoor media, and directed on-ground sales teams.",
         "Facilitated legal documentation, buyer sales agreements, and property handover procedures.",
       ],
@@ -100,10 +107,11 @@ export default function Home() {
     },
   ];
 
+  // Core Competencies ordered: Real Estate Sales first, then Digital Marketing, then Market Intelligence
   const skills = [
+    { name: "Real Estate Sales & Deal Closures", highlight: true },
     { name: "Digital Marketing & Creative Formation", highlight: true },
     { name: "Market Intelligence & Brand Positioning", highlight: true },
-    { name: "Real Estate Sales & Deal Closures", highlight: false },
     { name: "Builder Representation", highlight: false },
     { name: "Go-To-Market Strategy", highlight: false },
     { name: "Pricing Architecture", highlight: false },
@@ -146,7 +154,7 @@ export default function Home() {
         </div>
       </header>
 
-      {/* 2. HERO SECTION (Brackets removed from the top) */}
+      {/* 2. HERO SECTION */}
       <section id="hero" className="relative min-h-[90svh] pt-32 pb-20 px-6 md:px-12 flex flex-col justify-between overflow-hidden">
         
         <div 
@@ -158,7 +166,7 @@ export default function Home() {
 
         <div className="relative z-10 max-w-[100rem] mx-auto w-full my-auto py-12 md:py-16">
           <div className="text-xs md:text-sm font-mono uppercase tracking-[0.2em] text-[#b4924c] mb-4">
-            Founder at Focal Town
+            Founder of Focal Town
           </div>
           
           <h1 className="font-display font-black text-[13vw] sm:text-[11vw] md:text-[9.5vw] uppercase tracking-[-0.035em] text-[#e8e4dc] leading-[0.88] mb-6">
@@ -207,7 +215,7 @@ export default function Home() {
                 My professional foundation was developed across respected industry leaders including <strong className="text-[#e8e4dc]">Brigade Group</strong>, <strong className="text-[#e8e4dc]">Assetz Group</strong>, <strong className="text-[#e8e4dc]">Gowri Construction</strong>, and <strong className="text-[#e8e4dc]">HomzNSpace</strong>—managing end-to-end sales cycles, targeted digital campaigns, high-impact outdoor hoardings, client negotiations, agreements, and property handovers.
               </p>
               <p>
-                In January 2021, I founded <strong className="text-[#e8e4dc]">Focal Town</strong>, bringing creative marketing formation, deep market understanding, transparent advisory, and high velocity to real estate transactions.
+                In January 2021, I established <strong className="text-[#e8e4dc]">Focal Town</strong>, bringing creative marketing formation, deep market understanding, transparent advisory, and high velocity to real estate transactions.
               </p>
               <p>
                 Academic credentials include an <strong className="text-[#e8e4dc]">MBA in Finance</strong> from the University of Mysore, a Bachelor of Business Administration in Marketing, and P.B.M (Marketing).
@@ -241,7 +249,7 @@ export default function Home() {
                   4+ YRS
                 </div>
                 <div className="text-xs font-mono uppercase tracking-widest text-[#8f887b] mt-2">
-                  FOCAL TOWN FOUNDER
+                  FOUNDER OF FOCAL TOWN
                 </div>
                 <div className="text-sm text-[#8f887b] mt-1">
                   Established January 2021 as a dedicated sales &amp; marketing company.
@@ -267,7 +275,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 4. FEATURED VENTURE: FOCAL TOWN (Marketing & Creative Formation Pillar) */}
+      {/* 4. FEATURED VENTURE: FOCAL TOWN */}
       <section id="venture" className="py-24 md:py-32 px-6 md:px-12 border-t border-[#e8e4dc]/10 bg-[#14120f] relative overflow-hidden">
         
         <div 
@@ -398,7 +406,7 @@ export default function Home() {
                   {/* Expandable Inline Tab Content */}
                   <div
                     className={`overflow-hidden transition-all duration-300 bg-[#14120f] border-l-4 border-[#b4924c] ${
-                      isActive ? "max-h-[500px] p-6 md:p-8 opacity-100" : "max-h-0 p-0 opacity-0"
+                      isActive ? "max-h-[520px] p-6 md:p-8 opacity-100" : "max-h-0 p-0 opacity-0"
                     }`}
                   >
                     <div className="flex flex-wrap justify-between items-center gap-4 pb-4 mb-4 border-b border-[#e8e4dc]/10 text-xs font-mono uppercase">
@@ -514,7 +522,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 7. FOOTER / CONTACT */}
+      {/* 7. FOOTER / CONTACT (Dual Channels: Email & Mobile Number) */}
       <footer id="contact" className="relative pt-24 md:pt-36 pb-12 px-6 md:px-12 bg-[#0a0908] border-t border-[#e8e4dc]/10 overflow-hidden">
         
         <div 
@@ -531,26 +539,63 @@ export default function Home() {
             <span>AVAILABLE FOR REAL ESTATE MANDATES &amp; MARKETING ADVISORY</span>
           </div>
 
-          <h2 className="font-display font-black text-[clamp(2.5rem,10vw,9.5rem)] uppercase text-[#e8e4dc] leading-[0.9] tracking-[-0.03em] mb-8">
+          <h2 className="font-display font-black text-[clamp(2.5rem,10vw,9.5rem)] uppercase text-[#e8e4dc] leading-[0.9] tracking-[-0.03em] mb-12">
             LET'S TALK <span className="font-serif-it text-[#d65d72] normal-case">Real Estate</span>
           </h2>
 
-          <div className="mb-12">
+          {/* Dual Direct Channels: Email & Mobile */}
+          <div className="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 mb-16 text-left">
+            
+            {/* Direct Email Card */}
             <a
-              href="mailto:a.r.srinidhi@gmail.com"
-              className="inline-block font-display font-semibold text-xl sm:text-2xl md:text-4xl text-[#e8e4dc] border-b-2 border-[#b4924c] pb-1 hover:text-[#b4924c] transition-colors duration-300"
+              href={`mailto:${contactInfo.email}`}
+              className="p-8 bg-[#14120f] border border-[#e8e4dc]/15 hover:border-[#b4924c] hover:bg-[#1d1a16] transition-all duration-300 flex flex-col justify-between group"
             >
-              a.r.srinidhi@gmail.com
+              <div>
+                <span className="font-mono text-xs uppercase tracking-widest text-[#8f887b] block mb-2">Direct Email</span>
+                <span className="font-display font-bold text-xl md:text-2xl text-[#e8e4dc] group-hover:text-[#b4924c] transition-colors break-all">
+                  {contactInfo.email}
+                </span>
+              </div>
+              <span className="font-mono text-xs text-[#d65d72] uppercase tracking-wider mt-6 block">
+                Send Email ↗
+              </span>
             </a>
+
+            {/* Direct Mobile Card */}
+            <a
+              href={`tel:${contactInfo.mobileNumber.replace(/\s+/g, '')}`}
+              className="p-8 bg-[#14120f] border border-[#e8e4dc]/15 hover:border-[#b4924c] hover:bg-[#1d1a16] transition-all duration-300 flex flex-col justify-between group"
+            >
+              <div>
+                <span className="font-mono text-xs uppercase tracking-widest text-[#8f887b] block mb-2">Direct Mobile / Call</span>
+                <span className="font-display font-bold text-xl md:text-2xl text-[#e8e4dc] group-hover:text-[#b4924c] transition-colors">
+                  {contactInfo.mobileNumber}
+                </span>
+              </div>
+              <span className="font-mono text-xs text-[#d65d72] uppercase tracking-wider mt-6 block">
+                Call / WhatsApp ↗
+              </span>
+            </a>
+
           </div>
 
+          {/* Social Circles Row */}
           <div className="flex justify-center items-center gap-4 mb-20">
             <a
-              href="mailto:a.r.srinidhi@gmail.com"
+              href={`mailto:${contactInfo.email}`}
               aria-label="Send Email"
               className="w-12 h-12 rounded-full bg-[#7d1f2e] text-[#e8e4dc] flex items-center justify-center hover:bg-[#a32639] transition-colors duration-300 text-sm font-mono"
             >
               ✉
+            </a>
+
+            <a
+              href={`tel:${contactInfo.mobileNumber.replace(/\s+/g, '')}`}
+              aria-label="Call Mobile"
+              className="w-12 h-12 rounded-full bg-[#7d1f2e] text-[#e8e4dc] flex items-center justify-center hover:bg-[#a32639] transition-colors duration-300 text-sm font-mono"
+            >
+              ✆
             </a>
 
             <a
@@ -575,7 +620,7 @@ export default function Home() {
           </div>
 
           <div className="pt-8 border-t border-[#e8e4dc]/10 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs font-mono uppercase tracking-wider text-[#8f887b]">
-            <div>© {new Date().getFullYear()} A.R. Srinidhi · Founder at Focal Town</div>
+            <div>© {new Date().getFullYear()} A.R. Srinidhi · Founder of Focal Town</div>
             <div>Bengaluru, Karnataka, India</div>
             <a href="#hero" className="hover:text-[#e8e4dc] transition-colors">Back to top ↑</a>
           </div>

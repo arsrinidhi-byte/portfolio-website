@@ -581,11 +581,11 @@ export default function Home() {
           </div>
 
           {/* Social Circles Row */}
-          <div className="flex justify-center items-center gap-4 mb-20">
+          <div className="flex justify-center items-center gap-5 mb-20">
             <a
               href={`mailto:${contactInfo.email}`}
               aria-label="Send Email"
-              className="w-12 h-12 rounded-full bg-[#7d1f2e] text-[#e8e4dc] flex items-center justify-center hover:bg-[#a32639] transition-colors duration-300 text-sm font-mono"
+              className="w-14 h-14 rounded-full bg-[#7d1f2e] text-[#e8e4dc] flex items-center justify-center hover:bg-[#a32639] transition-all duration-300 text-xl font-mono shadow-lg hover:-translate-y-1 hover:scale-105"
             >
               ✉
             </a>
@@ -593,29 +593,9 @@ export default function Home() {
             <a
               href={`tel:${contactInfo.mobileNumber.replace(/\s+/g, '')}`}
               aria-label="Call Mobile"
-              className="w-12 h-12 rounded-full bg-[#7d1f2e] text-[#e8e4dc] flex items-center justify-center hover:bg-[#a32639] transition-colors duration-300 text-sm font-mono"
+              className="w-14 h-14 rounded-full bg-[#7d1f2e] text-[#e8e4dc] flex items-center justify-center hover:bg-[#a32639] transition-all duration-300 text-xl font-mono shadow-lg hover:-translate-y-1 hover:scale-105"
             >
               ✆
-            </a>
-
-            <a
-              href="https://www.linkedin.com/in/srinidhi-a-r-b0125755/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn Profile"
-              className="w-12 h-12 rounded-full bg-[#7d1f2e] text-[#e8e4dc] flex items-center justify-center hover:bg-[#a32639] transition-colors duration-300 font-mono text-sm font-bold"
-            >
-              in
-            </a>
-
-            <a
-              href="https://github.com/arsrinidhi-byte"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub Profile"
-              className="w-12 h-12 rounded-full bg-[#7d1f2e] text-[#e8e4dc] flex items-center justify-center hover:bg-[#a32639] transition-colors duration-300 font-mono text-sm font-bold"
-            >
-              gh
             </a>
           </div>
 

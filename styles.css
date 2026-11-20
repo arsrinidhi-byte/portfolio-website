@@ -945,13 +945,13 @@ a {
 .social-circle-row {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.5rem;
   margin-bottom: 5rem;
 }
 
 .social-circle {
-  width: 48px;
-  height: 48px;
+  width: 58px;
+  height: 58px;
   border-radius: 50%;
   background-color: var(--wine);
   color: var(--bone);
@@ -959,13 +959,16 @@ a {
   align-items: center;
   justify-content: center;
   font-family: var(--f-mono);
-  font-size: 0.9rem;
+  font-size: 1.35rem;
   font-weight: 600;
-  transition: background-color 0.3s;
+  transition: all 0.3s var(--ease-out);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
 }
 
 .social-circle:hover {
   background-color: var(--wine-bright);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 24px rgba(125, 31, 46, 0.45);
 }
 
 .legal-bar {

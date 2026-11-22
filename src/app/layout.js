@@ -1,4 +1,6 @@
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata = {
   title: "A.R. Srinidhi — Real Estate Sales Leader & Founder of Focal Town",
@@ -19,6 +21,8 @@ export default function RootLayout({ children }) {
       </head>
       <body className="min-h-[100dvh] bg-[#0a0908] text-[#e8e4dc] selection:bg-[#7d1f2e] selection:text-[#e8e4dc]">
         {children}
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
